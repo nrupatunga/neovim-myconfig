@@ -29,10 +29,4 @@ Plug 'saadparwaiz1/cmp_luasnip' -- snippet completion
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
---Plug 'SirVer/ultisnips'
---Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
 vim.call('plug#end')
-
--- hop.nvim setup
-require'hop'.setup()
