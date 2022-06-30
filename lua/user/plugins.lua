@@ -13,6 +13,8 @@ Plug 'rrethy/vim-illuminate' -- when you search, all the matching elements are h
 Plug 'scrooloose/nerdcommenter' -- commenting lines
 Plug 'tpope/vim-surround' -- surround the selection with parentheses
 Plug 'vim-scripts/mru.vim'  -- keeps list of most recently used files
+Plug 'vim-scripts/taglist.vim'
+Plug 'ludovicchabant/vim-gutentags'
 
 -- popup implemented for neovim
 Plug 'nvim-telescope/telescope.nvim'
