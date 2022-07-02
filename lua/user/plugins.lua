@@ -40,8 +40,12 @@ Plug("nvim-treesitter/nvim-treesitter")
 Plug("p00f/nvim-ts-rainbow")
 
 -- nvim tree
---Plug("kyazdani42/nvim-web-devicons")
+Plug("kyazdani42/nvim-web-devicons")
 Plug("kyazdani42/nvim-tree.lua")
 Plug("nvim-lualine/lualine.nvim")
+
+Plug("lewis6991/impatient.nvim")
+Plug("lewis6991/gitsigns.nvim")
+--Plug("akinsho/toggleterm.nvim")
 
 vim.call("plug#end")

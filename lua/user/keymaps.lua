@@ -74,3 +74,8 @@ keymap(
 
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+-- Move text up and down, only works in visual mode, other mode, since
+-- xmonad conflicts, we havent mappend it yet
+keymap("x", "J", ":move '>+1<CR>gv-gv")
+keymap("x", "K", ":move '<-2<CR>gv-gv")
