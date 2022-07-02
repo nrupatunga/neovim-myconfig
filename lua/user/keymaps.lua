@@ -1,20 +1,19 @@
 local function keymap(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
+	local options = { noremap = true, silent = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- change leader to comma
 vim.g.mapleader = ","
 
 -- which key helps in getting the leader key mappings
-keymap('n', '<leader>', ":WhichKey ','<CR>")
+keymap("n", "<leader>", ":WhichKey ','<CR>")
 
 -- easier escape mode from home row keys
 keymap("i", "jk", "<ESC>")
-
 
 -- Normal --
 -- Better window navigation
@@ -50,10 +49,28 @@ keymap("v", "<F7>", "<Esc>yyp<c-v>$r-A")
 keymap("n", "<leader><leader>w", ":HopWord<CR>")
 keymap("n", "<leader><leader>b", ":HopWordBC<CR>")
 
-
 -- telescope nvim
-keymap("n", "<leader>F", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
-keymap("n", "<leader>t", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
-keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+keymap(
+	"n",
+	"<leader>F",
+	"<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
+keymap(
+	"n",
+	"<leader>t",
+	"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
+keymap(
+	"n",
+	"<leader>r",
+	"<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
 --keymap("n", "<leader>t", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = true }))<cr>")
+
+-- nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
