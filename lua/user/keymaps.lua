@@ -13,7 +13,7 @@ vim.g.mapleader = ","
 keymap('n', '<leader>', ":WhichKey ','<CR>")
 
 -- easier escape mode from home row keys
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>")
 
 
 -- Normal --
@@ -54,4 +54,6 @@ keymap("n", "<leader><leader>b", ":HopWordBC<CR>")
 -- telescope nvim
 keymap("n", "<leader>F", "<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
-
+keymap("n", "<leader>t", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+--keymap("n", "<leader>t", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = true }))<cr>")
