@@ -4,7 +4,6 @@ vim.call("plug#begin", "~/.config/nvim/plugged")
 
 --these are my old vim plugins I still use
 Plug("christoomey/vim-tmux-navigator") -- switching between panes with tmux + vim
---Plug 'dense-analysis/ale'
 Plug("jiangmiao/auto-pairs") -- pair the braces
 Plug("liuchengxu/vim-which-key") -- this is helpful when I want to find what leader key is mapped too
 Plug("mhinz/vim-startify") -- startify (im used to it)
@@ -46,6 +45,6 @@ Plug("nvim-lualine/lualine.nvim")
 
 Plug("lewis6991/impatient.nvim")
 Plug("lewis6991/gitsigns.nvim")
---Plug("akinsho/toggleterm.nvim")
+Plug("martinsione/darkplus.nvim")
 
 vim.call("plug#end")

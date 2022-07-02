@@ -48,6 +48,7 @@ keymap("v", "<F7>", "<Esc>yyp<c-v>$r-A")
 -- hop.nvim
 keymap("n", "<leader><leader>w", ":HopWord<CR>")
 keymap("n", "<leader><leader>b", ":HopWordBC<CR>")
+keymap("n", "<leader><leader>p", ":HopPattern<CR>")
 
 -- telescope nvim
 keymap(
@@ -67,10 +68,10 @@ keymap(
 )
 keymap(
 	"n",
-	"<leader>r",
+	"<leader>o",
 	"<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
---keymap("n", "<leader>t", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = true }))<cr>")
+keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>")
 
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
