@@ -16,9 +16,10 @@ Plug("vim-scripts/taglist.vim")
 Plug("ludovicchabant/vim-gutentags")
 
 -- popup implemented for neovim
-Plug("nvim-telescope/telescope.nvim")
-Plug("nvim-lua/plenary.nvim")
 Plug("nvim-lua/popup.nvim")
+Plug("nvim-lua/plenary.nvim")
+Plug("nvim-telescope/telescope.nvim")
+Plug("nvim-telescope/telescope-media-files.nvim")
 
 -- completion plugin
 Plug("hrsh7th/nvim-cmp")
