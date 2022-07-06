@@ -7,7 +7,6 @@ Plug("christoomey/vim-tmux-navigator") -- switching between panes with tmux + vi
 Plug("jiangmiao/auto-pairs") -- pair the braces
 Plug("liuchengxu/vim-which-key") -- this is helpful when I want to find what leader key is mapped too
 Plug("mhinz/vim-startify") -- startify (im used to it)
-Plug("phaazon/hop.nvim") -- this is similar to easy motion
 Plug("rrethy/vim-illuminate") -- when you search, all the matching elements are highlighted
 Plug("scrooloose/nerdcommenter") -- commenting lines
 Plug("tpope/vim-surround") -- surround the selection with parentheses
@@ -15,6 +14,9 @@ Plug("vim-scripts/mru.vim") -- keeps list of most recently used files
 Plug("vim-scripts/taglist.vim")
 Plug("ludovicchabant/vim-gutentags")
 Plug("wellle/context.vim")
+
+-- similar to vim easy motion
+Plug("phaazon/hop.nvim") -- this is similar to easy motion
 
 -- popup implemented for neovim
 Plug("nvim-lua/popup.nvim")
