@@ -24,6 +24,7 @@ Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-media-files.nvim")
 Plug("nvim-telescope/telescope-fzf-native.nvim")
+Plug("lifer0se/ezbookmarks.nvim") -- bookmark only few files and use telescope to browse
 
 -- completion plugin
 Plug("hrsh7th/nvim-cmp")

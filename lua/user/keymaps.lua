@@ -73,10 +73,10 @@ keymap(
 )
 keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>")
 
--- harpoon, removing this plugin, because, it does not seem to work as
--- expected sometimes
---keymap("n", "<leader>s", ":lua require('harpoon.ui').toggle_quick_menu()<cr>")
---keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>")
+-- small set of bookmarks to browse through
+keymap("n", "<leader>a", ":lua require('ezbookmarks').AddBookmark()<cr>")
+keymap("n", "<leader>d", ":lua require('ezbookmarks').RemoveBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>")
+keymap("n", "<leader>s", ":lua require('ezbookmarks').OpenBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>")
 
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
