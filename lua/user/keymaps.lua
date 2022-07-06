@@ -73,6 +73,11 @@ keymap(
 )
 keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>")
 
+-- harpoon, removing this plugin, because, it does not seem to work as
+-- expected sometimes
+--keymap("n", "<leader>s", ":lua require('harpoon.ui').toggle_quick_menu()<cr>")
+--keymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<cr>")
+
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 
