@@ -85,3 +85,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- xmonad conflicts, we havent mappend it yet
 keymap("x", "J", ":move '>+1<CR>gv-gv")
 keymap("x", "K", ":move '<-2<CR>gv-gv")
+
+-- trouble.nvim
+local opts_trouble = {silent = true, noremap = true}
+keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts_trouble)
+keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts_trouble)
+keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts_trouble)
+keymap("n", "<leader>R", "<cmd>Trouble lsp_references<cr>", opts_trouble)

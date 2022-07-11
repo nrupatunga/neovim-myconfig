@@ -55,5 +55,6 @@ Plug("martinsione/darkplus.nvim")
 
 -- smooth scroll
 Plug("karb94/neoscroll.nvim")
+Plug("folke/trouble.nvim")
 
 vim.call("plug#end")
