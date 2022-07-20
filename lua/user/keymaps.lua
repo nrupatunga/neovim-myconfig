@@ -66,6 +66,12 @@ keymap(
 	"<leader>t",
 	"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
+
+keymap(
+	"n",
+	"<leader>y",
+	"<cmd>lua require'telescope.builtin'.marks(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
 keymap(
 	"n",
 	"<leader>o",
@@ -75,8 +81,16 @@ keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<c
 
 -- small set of bookmarks to browse through
 keymap("n", "<leader>a", ":lua require('ezbookmarks').AddBookmark()<cr>")
-keymap("n", "<leader>d", ":lua require('ezbookmarks').RemoveBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>")
-keymap("n", "<leader>s", ":lua require('ezbookmarks').OpenBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>")
+keymap(
+	"n",
+	"<leader>d",
+	":lua require('ezbookmarks').RemoveBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>"
+)
+keymap(
+	"n",
+	"<leader>s",
+	":lua require('ezbookmarks').OpenBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>"
+)
 
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -87,7 +101,7 @@ keymap("x", "J", ":move '>+1<CR>gv-gv")
 keymap("x", "K", ":move '<-2<CR>gv-gv")
 
 -- trouble.nvim
-local opts_trouble = {silent = true, noremap = true}
+local opts_trouble = { silent = true, noremap = true }
 keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts_trouble)
 keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts_trouble)
 keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts_trouble)

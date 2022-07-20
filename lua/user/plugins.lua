@@ -43,6 +43,7 @@ Plug("williamboman/nvim-lsp-installer")
 Plug("nvim-treesitter/nvim-treesitter")
 Plug("p00f/nvim-ts-rainbow")
 Plug("jose-elias-alvarez/null-ls.nvim")
+Plug("hrsh7th/cmp-nvim-lsp-signature-help")
 
 -- nvim tree
 Plug("kyazdani42/nvim-web-devicons")
@@ -56,5 +57,8 @@ Plug("martinsione/darkplus.nvim")
 -- smooth scroll
 Plug("karb94/neoscroll.nvim")
 Plug("folke/trouble.nvim")
+
+--marks
+Plug("chentoast/marks.nvim")
 
 vim.call("plug#end")
