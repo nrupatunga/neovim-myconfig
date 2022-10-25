@@ -25,6 +25,7 @@ Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-media-files.nvim")
 Plug("nvim-telescope/telescope-fzf-native.nvim")
 Plug("lifer0se/ezbookmarks.nvim") -- bookmark only few files and use telescope to browse
+Plug("tom-anders/telescope-vim-bookmarks.nvim")
 
 -- completion plugin
 Plug("hrsh7th/nvim-cmp")
@@ -44,6 +45,7 @@ Plug("nvim-treesitter/nvim-treesitter")
 Plug("p00f/nvim-ts-rainbow")
 Plug("jose-elias-alvarez/null-ls.nvim")
 Plug("hrsh7th/cmp-nvim-lsp-signature-help")
+Plug("smjonas/inc-rename.nvim")
 
 -- nvim tree
 Plug("kyazdani42/nvim-web-devicons")
@@ -58,7 +60,15 @@ Plug("martinsione/darkplus.nvim")
 Plug("karb94/neoscroll.nvim")
 Plug("folke/trouble.nvim")
 
---marks
-Plug("chentoast/marks.nvim")
+--markdown preview plugin
+Plug("iamcco/markdown-preview.nvim")
+Plug("hynek/vim-python-pep8-indent")
+
+--colorscheme
+Plug("chriskempson/base16-vim")
+
+-- search plugin
+Plug("windwp/nvim-spectre")
+Plug("z0mbix/vim-shfmt")
 
 vim.call("plug#end")

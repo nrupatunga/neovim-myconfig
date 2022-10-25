@@ -109,12 +109,18 @@ keymap("n", "<leader>R", "<cmd>Trouble lsp_references<cr>", opts_trouble)
 
 vim.g.diagnostics_visible = true
 function _G.toggle_diagnostics()
-  if vim.g.diagnostics_visible then
-    vim.g.diagnostics_visible = false
-    vim.diagnostic.disable()
-  else
-    vim.g.diagnostics_visible = true
-    vim.diagnostic.enable()
-  end
+	if vim.g.diagnostics_visible then
+		vim.g.diagnostics_visible = false
+		vim.diagnostic.disable()
+	else
+		vim.g.diagnostics_visible = true
+		vim.diagnostic.enable()
+	end
 end
-keymap('n', '<leader>D', ':call v:lua.toggle_diagnostics()<CR>', {silent=true, noremap=true})
+
+keymap("n", "<leader>D", ":call v:lua.toggle_diagnostics()<CR>", { silent = true, noremap = true })
+
+-- search
+--keymap("n", "<leader>S", "<cmd>lua require('spectre').open()<cr>")
+--keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>")
+--keymap("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>")
