@@ -11,8 +11,6 @@ Plug("rrethy/vim-illuminate") -- when you search, all the matching elements are 
 Plug("scrooloose/nerdcommenter") -- commenting lines
 Plug("tpope/vim-surround") -- surround the selection with parentheses
 Plug("vim-scripts/mru.vim") -- keeps list of most recently used files
-Plug("vim-scripts/taglist.vim")
-Plug("ludovicchabant/vim-gutentags")
 Plug("wellle/context.vim")
 
 -- similar to vim easy motion
@@ -24,7 +22,6 @@ Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-media-files.nvim")
 Plug("nvim-telescope/telescope-fzf-native.nvim")
-Plug("lifer0se/ezbookmarks.nvim") -- bookmark only few files and use telescope to browse
 Plug("tom-anders/telescope-vim-bookmarks.nvim")
 
 -- completion plugin
@@ -42,19 +39,19 @@ Plug("rafamadriz/friendly-snippets")
 Plug("neovim/nvim-lspconfig")
 Plug("williamboman/nvim-lsp-installer")
 Plug("nvim-treesitter/nvim-treesitter")
---Plug("p00f/nvim-ts-rainbow")
 Plug("jose-elias-alvarez/null-ls.nvim")
 Plug("hrsh7th/cmp-nvim-lsp-signature-help")
-Plug("smjonas/inc-rename.nvim")
 
 -- nvim tree
 Plug("kyazdani42/nvim-web-devicons")
 Plug("kyazdani42/nvim-tree.lua")
 Plug("nvim-lualine/lualine.nvim")
 
-Plug("lewis6991/impatient.nvim") -- improve startup time neovim
+-- improve startup time neovim
+Plug("lewis6991/impatient.nvim")
+
+-- git
 Plug("lewis6991/gitsigns.nvim")
-Plug("martinsione/darkplus.nvim")
 
 -- smooth scroll
 Plug("karb94/neoscroll.nvim")
@@ -64,12 +61,8 @@ Plug("folke/trouble.nvim")
 Plug("iamcco/markdown-preview.nvim")
 Plug("hynek/vim-python-pep8-indent")
 
---colorscheme
-Plug("chriskempson/base16-vim")
-
 -- search plugin
-Plug("windwp/nvim-spectre")
 Plug("z0mbix/vim-shfmt")
-Plug("ggandor/leap.nvim")
+Plug("smjonas/inc-rename.nvim")
 
 vim.call("plug#end")
