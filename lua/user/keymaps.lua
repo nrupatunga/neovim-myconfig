@@ -61,11 +61,11 @@ keymap(
 	"<leader>f",
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
-keymap(
-	"n",
-	"<leader>t",
-	"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
-)
+--keymap(
+--"n",
+--"<leader>t",
+--"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+--)
 
 keymap(
 	"n",
@@ -79,17 +79,10 @@ keymap(
 )
 keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>")
 
--- small set of bookmarks to browse through
-keymap("n", "<leader>a", ":lua require('ezbookmarks').AddBookmark()<cr>")
 keymap(
 	"n",
-	"<leader>d",
-	":lua require('ezbookmarks').RemoveBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>"
-)
-keymap(
-	"n",
-	"<leader>s",
-	":lua require('ezbookmarks').OpenBookmark(require('telescope.themes').get_dropdown({previewer = false}))<cr>"
+	"<leader>t",
+	"<cmd>lua require'telescope.builtin'.lsp_document_symbols(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
 
 -- nvimtree
@@ -120,7 +113,8 @@ end
 
 keymap("n", "<leader>D", ":call v:lua.toggle_diagnostics()<CR>", { silent = true, noremap = true })
 
--- search
---keymap("n", "<leader>S", "<cmd>lua require('spectre').open()<cr>")
---keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>")
---keymap("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>")
+keymap("n", "J", "mzJ`z")
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
