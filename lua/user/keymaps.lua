@@ -61,11 +61,11 @@ keymap(
 	"<leader>f",
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
-keymap(
-	"n",
-	"<leader>t",
-	"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
-)
+--keymap(
+--"n",
+--"<leader>t",
+--"<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+--)
 
 keymap(
 	"n",
@@ -78,6 +78,12 @@ keymap(
 	"<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
 )
 keymap("n", "<leader>r", "<cmd>lua require'telescope.builtin'.lsp_references()<cr>")
+
+keymap(
+	"n",
+	"<leader>t",
+	"<cmd>lua require'telescope.builtin'.lsp_document_symbols(require('telescope.themes').get_dropdown({ previewer = false }))<cr>"
+)
 
 -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
@@ -106,3 +112,9 @@ function _G.toggle_diagnostics()
 end
 
 keymap("n", "<leader>D", ":call v:lua.toggle_diagnostics()<CR>", { silent = true, noremap = true })
+
+keymap("n", "J", "mzJ`z")
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")

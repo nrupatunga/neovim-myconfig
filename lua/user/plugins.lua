@@ -65,4 +65,5 @@ Plug("hynek/vim-python-pep8-indent")
 Plug("z0mbix/vim-shfmt")
 Plug("smjonas/inc-rename.nvim")
 
+Plug("theprimeagen/harpoon")
 vim.call("plug#end")
