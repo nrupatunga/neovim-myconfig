@@ -1,79 +1,77 @@
-local Plug = vim.fn["plug#"]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
+local plugins = {
+	--these are my old vim plugins I still use
+	"christoomey/vim-tmux-navigator", -- switching between panes with tmux + vim
+	"jiangmiao/auto-pairs", -- pair the braces
+	"liuchengxu/vim-which-key",-- this is helpful when I want to find what leader key is mapped too
+	"mhinz/vim-startify", -- startify (im used to it)
+	"rrethy/vim-illuminate", -- when you search, all the matching elements are highlighted
+	"scrooloose/nerdcommenter", -- commenting lines
+	"tpope/vim-surround", -- surround the selection with parentheses
+	"vim-scripts/mru.vim", -- keeps list of most recently used files
+	"wellle/context.vim",
+	"phaazon/hop.nvim", -- this is similar to easy motion
+	"nvim-lua/popup.nvim", -- popup implemented for neovim
+	"nvim-lua/plenary.nvim",
+	"nvim-telescope/telescope.nvim",
+	"nvim-telescope/telescope-media-files.nvim",
+	"nvim-telescope/telescope-fzf-native.nvim",
+	"tom-anders/telescope-vim-bookmarks.nvim",
+	-- completion plugin
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	"saadparwaiz1/cmp_luasnip", -- snippet completion
+	"hrsh7th/cmp-nvim-lsp",
+	-- luasnip for completion
+	"L3MON4D3/LuaSnip",
+	"rafamadriz/friendly-snippets",
+	-- lsp
+	"neovim/nvim-lspconfig",
+	"williamboman/nvim-lsp-installer",
+	"nvim-treesitter/nvim-treesitter",
+	"jose-elias-alvarez/null-ls.nvim",
+	"hrsh7th/cmp-nvim-lsp-signature-help",
+	-- nvim tree
+	"kyazdani42/nvim-web-devicons",
+	"kyazdani42/nvim-tree.lua",
+	"nvim-lualine/lualine.nvim",
+	-- improve startup time neovim
+	"lewis6991/impatient.nvim",
+	-- git
+	"lewis6991/gitsigns.nvim",
+	-- smooth scroll
+	"karb94/neoscroll.nvim",
+	"folke/trouble.nvim",
+	--markdown preview plugin
+	"iamcco/markdown-preview.nvim",
+	"hynek/vim-python-pep8-indent",
 
-vim.call("plug#begin", "~/.config/nvim/plugged")
+	-- search plugin
+	"z0mbix/vim-shfmt",
+	"smjonas/inc-rename.nvim",
+	"theprimeagen/harpoon",
+	--org mode
+	"nvim-neorg/neorg",
+	"nvim-neorg/neorg-telescope",
 
---these are my old vim plugins I still use
-Plug("christoomey/vim-tmux-navigator") -- switching between panes with tmux + vim
-Plug("jiangmiao/auto-pairs") -- pair the braces
-Plug("liuchengxu/vim-which-key") -- this is helpful when I want to find what leader key is mapped too
-Plug("mhinz/vim-startify") -- startify (im used to it)
-Plug("rrethy/vim-illuminate") -- when you search, all the matching elements are highlighted
-Plug("scrooloose/nerdcommenter") -- commenting lines
-Plug("tpope/vim-surround") -- surround the selection with parentheses
-Plug("vim-scripts/mru.vim") -- keeps list of most recently used files
-Plug("wellle/context.vim")
+	--chatgpt
+	"MunifTanjim/nui.nvim",
+	"jackMort/ChatGPT.nvim",
+}
 
--- similar to vim easy motion
-Plug("phaazon/hop.nvim") -- this is similar to easy motion
+local opts = {}
 
--- popup implemented for neovim
-Plug("nvim-lua/popup.nvim")
-Plug("nvim-lua/plenary.nvim")
-Plug("nvim-telescope/telescope.nvim")
-Plug("nvim-telescope/telescope-media-files.nvim")
-Plug("nvim-telescope/telescope-fzf-native.nvim")
-Plug("tom-anders/telescope-vim-bookmarks.nvim")
-
--- completion plugin
-Plug("hrsh7th/nvim-cmp")
-Plug("hrsh7th/cmp-buffer")
-Plug("hrsh7th/cmp-path")
-Plug("saadparwaiz1/cmp_luasnip") -- snippet completion
-Plug("hrsh7th/cmp-nvim-lsp")
-
--- luasnip for completion
-Plug("L3MON4D3/LuaSnip")
-Plug("rafamadriz/friendly-snippets")
-
--- lsp
-Plug("neovim/nvim-lspconfig")
-Plug("williamboman/nvim-lsp-installer")
-Plug("nvim-treesitter/nvim-treesitter")
-Plug("jose-elias-alvarez/null-ls.nvim")
-Plug("hrsh7th/cmp-nvim-lsp-signature-help")
-
--- nvim tree
-Plug("kyazdani42/nvim-web-devicons")
-Plug("kyazdani42/nvim-tree.lua")
-Plug("nvim-lualine/lualine.nvim")
-
--- improve startup time neovim
-Plug("lewis6991/impatient.nvim")
-
--- git
-Plug("lewis6991/gitsigns.nvim")
-
--- smooth scroll
-Plug("karb94/neoscroll.nvim")
-Plug("folke/trouble.nvim")
-
---markdown preview plugin
-Plug("iamcco/markdown-preview.nvim")
-Plug("hynek/vim-python-pep8-indent")
-
--- search plugin
-Plug("z0mbix/vim-shfmt")
-Plug("smjonas/inc-rename.nvim")
-
-Plug("theprimeagen/harpoon")
---org mode
-Plug("nvim-neorg/neorg")
-Plug("nvim-neorg/neorg-telescope")
-
---chatgpt
-Plug("MunifTanjim/nui.nvim")
-Plug("jackMort/ChatGPT.nvim")
-
-
-vim.call("plug#end")
+require("lazy").setup(plugins, opts)
