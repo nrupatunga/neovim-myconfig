@@ -1,5 +1,6 @@
 local Plug = vim.fn["plug#"]
 
+
 vim.call("plug#begin", "~/.config/nvim/plugged")
 
 --these are my old vim plugins I still use
@@ -66,4 +67,13 @@ Plug("z0mbix/vim-shfmt")
 Plug("smjonas/inc-rename.nvim")
 
 Plug("theprimeagen/harpoon")
+--org mode
+Plug("nvim-neorg/neorg")
+Plug("nvim-neorg/neorg-telescope")
+
+--chatgpt
+Plug("MunifTanjim/nui.nvim")
+Plug("jackMort/ChatGPT.nvim")
+
+
 vim.call("plug#end")

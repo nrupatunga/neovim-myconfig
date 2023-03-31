@@ -14,7 +14,6 @@ local options = {
 	ignorecase = true,
 	number = true,
 	numberwidth = 4,
-	printfont = "courier:h6",
 	pumheight = 10, -- number of items to show in the pop up menu
 	relativenumber = true,
 	showcmd = true,
