@@ -45,7 +45,29 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+local border = {
+	{ "╭", "CmpBorder" },
+	{ "─", "CmpBorder" },
+	{ "╮", "CmpBorder" },
+	{ "│", "CmpBorder" },
+	{ "╯", "CmpBorder" },
+	{ "─", "CmpBorder" },
+	{ "╰", "CmpBorder" },
+	{ "│", "CmpBorder" },
+}
+
 cmp.setup({
+	view = {
+		entries = "native",
+	},
+	window = {
+		completion = {
+			border = border,
+		},
+		documentation = {
+			border = border,
+		},
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -122,13 +144,7 @@ cmp.setup({
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
 	},
-	window = {
-		documentation = {
-			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-		},
-	},
 	experimental = {
 		ghost_text = false,
-		native_menu = false,
 	},
 })

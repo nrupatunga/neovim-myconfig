@@ -55,7 +55,7 @@ local plugins = {
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
 	"saadparwaiz1/cmp_luasnip", -- snippet completion
-	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-nvim-lsp", -- lsp completion
 
 	-- luasnip for completion
 	"L3MON4D3/LuaSnip",
@@ -101,9 +101,16 @@ local plugins = {
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 	},
+	{
+		"jay-babu/mason-null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"williamboman/mason.nvim",
+			"jose-elias-alvarez/null-ls.nvim",
+		},
+	},
 
 	"nvim-treesitter/nvim-treesitter",
-	"jose-elias-alvarez/null-ls.nvim",
 	"hrsh7th/cmp-nvim-lsp-signature-help",
 	{
 		-- Highlight, edit, and navigate code
