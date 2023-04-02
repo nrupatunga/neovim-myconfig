@@ -2,7 +2,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
 	local output =
-	    vim.fn.system({ "git", "clone", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+		vim.fn.system({ "git", "clone", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 	if vim.api.nvim_get_vvar("shell_error") ~= 0 then
 		vim.api.nvim_err_writeln("Error cloning lazy.nvim repository...\n\n" .. output)
 	end
@@ -18,8 +18,7 @@ if not vim.loop.fs_stat(lazypath) then
 			vim.tbl_map(function(module)
 				pcall(require, module)
 			end, { "nvim-treesitter", "mason" })
-			require("astronvim.utils").notify(
-			"Mason is installing packages if configured, check status with :Mason")
+			require("astronvim.utils").notify("Mason is installing packages if configured, check status with :Mason")
 		end,
 	})
 end
@@ -28,15 +27,15 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	--these are my old vim plugins I still use
 	"christoomey/vim-tmux-navigator", -- switching between panes with tmux + vim
-	"jiangmiao/auto-pairs",    -- pair the braces
+	"jiangmiao/auto-pairs", -- pair the braces
 	"liuchengxu/vim-which-key", -- this is helpful when I want to find what leader key is mapped too
-	"mhinz/vim-startify",      -- startify (im used to it)
-	"rrethy/vim-illuminate",   -- when you search, all the matching elements are highlighted
+	"mhinz/vim-startify", -- startify (im used to it)
+	"rrethy/vim-illuminate", -- when you search, all the matching elements are highlighted
 	"scrooloose/nerdcommenter", -- commenting lines
-	"tpope/vim-surround",      -- surround the selection with parentheses
-	"vim-scripts/mru.vim",     -- keeps list of most recently used files
+	"tpope/vim-surround", -- surround the selection with parentheses
+	"vim-scripts/mru.vim", -- keeps list of most recently used files
 	"wellle/context.vim",
-	"phaazon/hop.nvim",        -- this is similar to easy motion
+	"phaazon/hop.nvim", -- this is similar to easy motion
 
 	-- Fuzzy Finder (files, lsp, etc)
 	{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },

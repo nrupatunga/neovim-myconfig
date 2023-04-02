@@ -8,7 +8,9 @@ local servers = {
 	"cssls",
 	"html",
 	"tsserver",
-	"pyright",
+	--"pyright",
+	"jedi_language_server",
+	--"pylsp",
 	"bashls",
 	"jsonls",
 	"yamlls",
@@ -36,6 +38,14 @@ for _, server in pairs(servers) do
 
 	if server == "pyright" then
 		local pyright_opts = require("user.lsp.settings.pyright")
+		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+	end
+	if server == "jedi_language_server" then
+		local pyright_opts = require("user.lsp.settings.jedi")
+		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+	end
+	if server == "pylsp" then
+		local pyright_opts = require("user.lsp.settings.pyls")
 		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	end
 
