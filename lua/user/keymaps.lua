@@ -118,3 +118,6 @@ keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
+
+-- lazygit
+keymap("n", "<leader>lg", ":call v:lua._LAZYGIT_TOGGLE()<CR>", { silent = true, noremap = true })
