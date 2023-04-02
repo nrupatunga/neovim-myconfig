@@ -130,6 +130,7 @@ local plugins = {
 			"MunifTanjim/nui.nvim",
 		},
 	},
+	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 }
 
 local opts = {}
