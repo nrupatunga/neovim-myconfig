@@ -65,13 +65,36 @@ require("mini.basics").setup({
 	silent = false,
 })
 
---require("mini.tabline").setup({
-	---- Whether to show file icons (requires 'nvim-tree/nvim-web-devicons')
-	--show_icons = false,
-	---- Whether to set Vim's settings for tabline (make it always shown and
-	---- allow hidden buffers)
-	--set_vim_settings = true,
-	---- Where to show tabpage section in case of multiple vim tabpages.
-	---- One of 'left', 'right', 'none'.
-	--tabpage_section = "none",
---})
+require("mini.tabline").setup({
+	-- Whether to show file icons (requires 'nvim-tree/nvim-web-devicons')
+	show_icons = false,
+	-- Whether to set Vim's settings for tabline (make it always shown and
+	-- allow hidden buffers)
+	set_vim_settings = true,
+	-- Where to show tabpage section in case of multiple vim tabpages.
+	-- One of 'left', 'right', 'none'.
+	tabpage_section = "none",
+})
+
+require("mini.move").setup( -- No need to copy this inside `setup()`. Will be used automatically.
+	{
+		-- Module mappings. Use `''` (empty string) to disable one.
+		mappings = {
+			-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+			left = "<S-h>",
+			right = "<S-l>",
+			down = "<S-j>",
+			up = "<S-k>",
+			-- Move current line in Normal mode
+			--line_left = "<M-h>",
+			--line_right = "<M-l>",
+			--line_down = "<M-j>",
+			--line_up = "<M-k>",
+		},
+		-- Options which control moving behavior
+		options = {
+			-- Automatically reindent selection during linewise vertical move
+			reindent_linewise = true,
+		},
+	}
+)
