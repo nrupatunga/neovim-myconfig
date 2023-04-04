@@ -86,8 +86,11 @@ local plugins = {
 	--chatgpt
 	"MunifTanjim/nui.nvim",
 	"jackMort/ChatGPT.nvim",
+
+	--themes
 	"lunarvim/darkplus.nvim",
 	"Mofiqul/vscode.nvim",
+	"catppuccin/nvim",
 
 	-- NOTE: This is where your plugins related to LSP can be installed.
 	--  The configuration is done below. Search for lspconfig to find it below.
