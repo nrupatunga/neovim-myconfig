@@ -16,7 +16,6 @@ local options = {
 	numberwidth = 4,
 	pumheight = 10, -- number of items to show in the pop up menu
 	relativenumber = true,
-	shortmess='a',
 	showcmd = true,
 	showmode = false, -- no more --INSERT-- message on the screen
 	signcolumn = "yes", -- signcolumn always, if set to true

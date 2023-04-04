@@ -30,7 +30,7 @@ local plugins = {
 	"jiangmiao/auto-pairs", -- pair the braces
 	"liuchengxu/vim-which-key", -- this is helpful when I want to find what leader key is mapped too
 	"mhinz/vim-startify", -- startify (im used to it)
-	"rrethy/vim-illuminate", -- when you search, all the matching elements are highlighted
+	--"rrethy/vim-illuminate", -- when you search, all the matching elements are highlighted
 	"scrooloose/nerdcommenter", -- commenting lines
 	"tpope/vim-surround", -- surround the selection with parentheses
 	"vim-scripts/mru.vim", -- keeps list of most recently used files

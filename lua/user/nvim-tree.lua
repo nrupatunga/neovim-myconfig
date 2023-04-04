@@ -56,9 +56,9 @@ nvim_tree.setup({
 	},
 	view = {
 		signcolumn = "no",
-		width = 35,
+		width = 30,
 		--height = 30,
-		side = "left",
+		side = "right",
 		mappings = {
 			list = {
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
