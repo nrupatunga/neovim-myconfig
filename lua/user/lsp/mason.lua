@@ -6,6 +6,7 @@ end
 local servers = {
 	"lua_ls",
 	"cssls",
+	"clangd",
 	"html",
 	"tsserver",
 	--"pyright",
